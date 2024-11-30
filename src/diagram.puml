@@ -1,0 +1,46 @@
+@startuml
+class Movie {
+    -movieID: int
+    -movieTitle: String
+    -releaseDate: String
+    -runningTime: int
+    -cast: List<String>
+    -genres: List<String>
+    -director: String
+    -languages: List<String>
+    -country: String
+    -budget: double
+    -poster: String
+    +calculateRating(): double
+}
+class Episode {
+    - int episodeID
+    - String title
+    - String airDate
+    - double duration
+    + Episode(int, String, String, double)
+    + int getEpisodeID()
+    + void setEpisodeID(int)
+    + String getTitle()
+    + void setTitle(String)
+    + String getAirDate()
+    + void setAirDate(String)
+    + double getDuration()
+    + void setDuration(double)
+}
+
+class Season {
+    - int seasonID
+    - String title
+    - List<Episode> episodes
+    + Season(int, String, List<Episode>)
+    + int getSeasonID()
+    + void setSeasonID(int)
+    + String getTitle()
+    + void setTitle(String)
+    + List<Episode> getEpisodes()
+    + void setEpisodes(List<Episode>)
+}
+
+
+@enduml
