@@ -1,10 +1,12 @@
 package Watchit;
 import java.time.LocalDate;
+
 abstract class Person {
     private String FirstName;
     private String LastName;
     private LocalDate dateOfBirth;
     private String gender;
+
     public Person(String FirstName , String LastName , LocalDate dateOfBirth , String gender){
         this.FirstName=FirstName;
         this.LastName=LastName;
